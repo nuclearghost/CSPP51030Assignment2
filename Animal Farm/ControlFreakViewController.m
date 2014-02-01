@@ -57,18 +57,21 @@
     animal = (Animal *)self.animals[0];
     animal.name = @"Fox";
     animal.image = [UIImage imageNamed:@"fox.jpg"];
+    animal.imagePath = @"fox.jpg";
     animal.soundPath = [[NSBundle mainBundle] pathForResource: @"fox"
                                                        ofType: @"m4a"];
 
     animal = (Animal *)self.animals[1];
     animal.name = @"Llama";
     animal.image = [UIImage imageNamed:@"llama.jpg"];
+    animal.imagePath = @"llama.jpg";
     animal.soundPath = [[NSBundle mainBundle] pathForResource: @"fox"
                                                        ofType: @"m4a"];
     
     animal = (Animal *)self.animals[2];
     animal.name = @"Seal";
     animal.image = [UIImage imageNamed:@"seal.jpg"];
+    animal.imagePath = @"seal.jpg";
     animal.soundPath = [[NSBundle mainBundle] pathForResource: @"fox"
                                                        ofType: @"m4a"];
     

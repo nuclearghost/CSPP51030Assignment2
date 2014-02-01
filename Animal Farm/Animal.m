@@ -11,7 +11,7 @@
 @implementation Animal
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"Animal Object: name=%@, age=%@, Image=%@", self.name, self.age, self.image];
+    return [NSString stringWithFormat:@"Animal Object: name=%@, age=%@, Image=%@", self.name, self.age, self.imagePath];
 }
 
 @end

@@ -13,6 +13,7 @@
 @property (nonatomic,strong) NSString *name;
 @property (nonatomic,strong) NSNumber *age;
 @property (nonatomic,strong) UIImage *image;
+@property (nonatomic, strong) NSString *imagePath;
 @property (nonatomic,strong) NSString *soundPath;
 
 -(NSString *)description;
