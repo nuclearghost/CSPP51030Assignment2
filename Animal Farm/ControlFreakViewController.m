@@ -21,7 +21,14 @@
     UIButton *btn = (UIButton *)sender;
     Animal *animal = (Animal *)self.animals[btn.tag];
     NSLog(@"%@",animal);
-    NSLog(@"tapped: %d",btn.tag);
+    
+    NSURL *fileURL = [[NSURL alloc] initFileURLWithPath: animal.soundPath];
+    
+    AVAudioPlayer *newPlayer =
+    [[AVAudioPlayer alloc] initWithContentsOfURL: fileURL
+                                           error: nil];
+    
+    [newPlayer play];
 }
 
 //Lifted generously from Lecture 2 slides
@@ -50,14 +57,20 @@
     animal = (Animal *)self.animals[0];
     animal.name = @"Fox";
     animal.image = [UIImage imageNamed:@"fox.jpg"];
+    animal.soundPath = [[NSBundle mainBundle] pathForResource: @"fox"
+                                                       ofType: @"m4a"];
 
     animal = (Animal *)self.animals[1];
     animal.name = @"Llama";
     animal.image = [UIImage imageNamed:@"llama.jpg"];
+    animal.soundPath = [[NSBundle mainBundle] pathForResource: @"fox"
+                                                       ofType: @"m4a"];
     
     animal = (Animal *)self.animals[2];
-    animal.name = @"Red Panda";
-    animal.image = [UIImage imageNamed:@"panda.jpg"];
+    animal.name = @"Seal";
+    animal.image = [UIImage imageNamed:@"seal.jpg"];
+    animal.soundPath = [[NSBundle mainBundle] pathForResource: @"fox"
+                                                       ofType: @"m4a"];
     
     self.animals = [self.animals shuffle];
     

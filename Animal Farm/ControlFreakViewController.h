@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVAudioPlayer.h>
 
 @interface ControlFreakViewController : UIViewController <UIScrollViewDelegate> {}
 
@@ -14,6 +15,8 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *_scrollView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+
+@property (nonatomic, retain) AVAudioPlayer *player;
 
 - (void)buttonTapped:(id)sender;
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;

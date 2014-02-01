@@ -25,7 +25,10 @@
 		F33B17E1189C8C7900B348E8 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B17E0189C8C7900B348E8 /* NSMutableArray+Shuffle.m */; };
 		F33B17E5189C9D0300B348E8 /* fox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33B17E2189C9D0300B348E8 /* fox.jpg */; };
 		F33B17E6189C9D0300B348E8 /* llama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33B17E3189C9D0300B348E8 /* llama.jpg */; };
-		F33B17E7189C9D0300B348E8 /* panda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33B17E4189C9D0300B348E8 /* panda.jpg */; };
+		F33B17EE189CBF4100B348E8 /* fox.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F33B17EB189CBF4100B348E8 /* fox.m4a */; };
+		F33B17EF189CBF4100B348E8 /* llama.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F33B17EC189CBF4100B348E8 /* llama.m4a */; };
+		F33B17F0189CBF4100B348E8 /* seal.m4a in Resources */ = {isa = PBXBuildFile; fileRef = F33B17ED189CBF4100B348E8 /* seal.m4a */; };
+		F33B17F3189CC03B00B348E8 /* seal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33B17F2189CC03B00B348E8 /* seal.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,10 @@
 		F33B17E0189C8C7900B348E8 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		F33B17E2189C9D0300B348E8 /* fox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fox.jpg; sourceTree = "<group>"; };
 		F33B17E3189C9D0300B348E8 /* llama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = llama.jpg; sourceTree = "<group>"; };
-		F33B17E4189C9D0300B348E8 /* panda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panda.jpg; sourceTree = "<group>"; };
+		F33B17EB189CBF4100B348E8 /* fox.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fox.m4a; sourceTree = "<group>"; };
+		F33B17EC189CBF4100B348E8 /* llama.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = llama.m4a; sourceTree = "<group>"; };
+		F33B17ED189CBF4100B348E8 /* seal.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = seal.m4a; sourceTree = "<group>"; };
+		F33B17F2189CC03B00B348E8 /* seal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seal.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,7 @@
 				F33B17BF189C89F400B348E8 /* Images.xcassets */,
 				F33B17DC189C8A3700B348E8 /* Animal.h */,
 				F33B17DD189C8A3700B348E8 /* Animal.m */,
+				F33B17F1189CBF4800B348E8 /* sounds */,
 				F33B17E8189C9D1A00B348E8 /* images */,
 				F33B17AE189C89F400B348E8 /* Supporting Files */,
 			);
@@ -172,11 +179,21 @@
 		F33B17E8189C9D1A00B348E8 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F33B17F2189CC03B00B348E8 /* seal.jpg */,
 				F33B17E2189C9D0300B348E8 /* fox.jpg */,
 				F33B17E3189C9D0300B348E8 /* llama.jpg */,
-				F33B17E4189C9D0300B348E8 /* panda.jpg */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		F33B17F1189CBF4800B348E8 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F33B17EB189CBF4100B348E8 /* fox.m4a */,
+				F33B17EC189CBF4100B348E8 /* llama.m4a */,
+				F33B17ED189CBF4100B348E8 /* seal.m4a */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +275,11 @@
 			files = (
 				F33B17C0189C89F400B348E8 /* Images.xcassets in Resources */,
 				F33B17B2189C89F400B348E8 /* InfoPlist.strings in Resources */,
-				F33B17E7189C9D0300B348E8 /* panda.jpg in Resources */,
+				F33B17F0189CBF4100B348E8 /* seal.m4a in Resources */,
 				F33B17E6189C9D0300B348E8 /* llama.jpg in Resources */,
+				F33B17F3189CC03B00B348E8 /* seal.jpg in Resources */,
+				F33B17EF189CBF4100B348E8 /* llama.m4a in Resources */,
+				F33B17EE189CBF4100B348E8 /* fox.m4a in Resources */,
 				F33B17BB189C89F400B348E8 /* Main.storyboard in Resources */,
 				F33B17E5189C9D0300B348E8 /* fox.jpg in Resources */,
 			);
