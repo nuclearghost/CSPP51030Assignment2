@@ -30,7 +30,7 @@
     CGFloat pageWidth = scrollView.frame.size.width;
     float fractionalPage = scrollView.contentOffset.x / pageWidth;
     NSInteger page = lround(fractionalPage);
-    NSLog(@"PAGE %d",page);
+    
     Animal *animal = (Animal *)self.animals[page];
     self.label.text = animal.name;
 }
@@ -68,18 +68,18 @@
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         
-        btn.frame = CGRectMake(i*320 + 80, 50, 150, 40);
+        btn.frame = CGRectMake(i*320 + 80, 30, 150, 40);
         
         [btn setTitle:animal.name forState:UIControlStateNormal];
         [btn addTarget:self action:buttonTappedSel forControlEvents:UIControlEventTouchUpInside];
         btn.tag = i;
         
         UIImageView *imgView = [[UIImageView alloc] init];
-        imgView.frame = CGRectMake(i*320,20,320,380);
+        imgView.frame = CGRectMake(i*320,70,320,380);
         imgView.image = animal.image;
-        [self.view addSubview:imgView];
+        [self._scrollView addSubview:imgView];
         
-        [self.view addSubview:btn];
+        [self._scrollView addSubview:btn];
     }
     
     [self scrollViewDidEndDecelerating:self._scrollView];
