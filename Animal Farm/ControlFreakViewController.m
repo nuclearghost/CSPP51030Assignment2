@@ -7,6 +7,8 @@
 //
 
 #import "ControlFreakViewController.h"
+#import "Animal.h"
+#import "NSMutableArray+Shuffle.h"
 
 @interface ControlFreakViewController ()
 
@@ -14,10 +16,78 @@
 
 @implementation ControlFreakViewController
 
+- (void)buttonTapped:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    Animal *animal = (Animal *)self.animals[btn.tag];
+    NSLog(@"%@",animal);
+    NSLog(@"tapped: %d",btn.tag);
+}
+
+//Lifted generously from Lecture 2 slides
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    CGFloat pageWidth = scrollView.frame.size.width;
+    float fractionalPage = scrollView.contentOffset.x / pageWidth;
+    NSInteger page = lround(fractionalPage);
+    NSLog(@"PAGE %d",page);
+    Animal *animal = (Animal *)self.animals[page];
+    self.label.text = animal.name;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.animals = [[NSMutableArray alloc] initWithCapacity:3];
+    
+    Animal *animal;
+    for (int i = 0; i < 3; ++i) {
+        animal = [[Animal alloc] init];
+        animal.age = [[NSNumber alloc] initWithUnsignedInt:arc4random_uniform(30)];
+        self.animals[i] = animal;
+    }
+    animal = (Animal *)self.animals[0];
+    animal.name = @"Fox";
+    animal.image = [UIImage imageNamed:@"fox.jpg"];
+
+    animal = (Animal *)self.animals[1];
+    animal.name = @"Llama";
+    animal.image = [UIImage imageNamed:@"llama.jpg"];
+    
+    animal = (Animal *)self.animals[2];
+    animal.name = @"Red Panda";
+    animal.image = [UIImage imageNamed:@"panda.jpg"];
+    
+    self.animals = [self.animals shuffle];
+    
+    SEL buttonTappedSel = NSSelectorFromString(@"buttonTapped:");
+    
+    for (int i = 0; i < 3; ++i) {
+        animal = (Animal *)self.animals[i];
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        
+        btn.frame = CGRectMake(i*320 + 80, 50, 150, 40);
+        
+        [btn setTitle:animal.name forState:UIControlStateNormal];
+        [btn addTarget:self action:buttonTappedSel forControlEvents:UIControlEventTouchUpInside];
+        btn.tag = i;
+        
+        UIImageView *imgView = [[UIImageView alloc] init];
+        imgView.frame = CGRectMake(i*320,20,320,380);
+        imgView.image = animal.image;
+        [self.view addSubview:imgView];
+        
+        [self.view addSubview:btn];
+    }
+    
+    [self scrollViewDidEndDecelerating:self._scrollView];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [self._scrollView setContentSize:CGSizeMake(960, 500)];
 }
 
 - (void)didReceiveMemoryWarning

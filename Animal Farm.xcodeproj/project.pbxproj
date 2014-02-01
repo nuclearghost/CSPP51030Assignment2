@@ -21,6 +21,11 @@
 		F33B17C9189C89F400B348E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F33B17AB189C89F400B348E8 /* UIKit.framework */; };
 		F33B17D1189C89F400B348E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F33B17CF189C89F400B348E8 /* InfoPlist.strings */; };
 		F33B17D3189C89F400B348E8 /* Animal_FarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B17D2189C89F400B348E8 /* Animal_FarmTests.m */; };
+		F33B17DE189C8A3700B348E8 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B17DD189C8A3700B348E8 /* Animal.m */; };
+		F33B17E1189C8C7900B348E8 /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = F33B17E0189C8C7900B348E8 /* NSMutableArray+Shuffle.m */; };
+		F33B17E5189C9D0300B348E8 /* fox.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33B17E2189C9D0300B348E8 /* fox.jpg */; };
+		F33B17E6189C9D0300B348E8 /* llama.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33B17E3189C9D0300B348E8 /* llama.jpg */; };
+		F33B17E7189C9D0300B348E8 /* panda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F33B17E4189C9D0300B348E8 /* panda.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,13 @@
 		F33B17CE189C89F400B348E8 /* Animal FarmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Animal FarmTests-Info.plist"; sourceTree = "<group>"; };
 		F33B17D0189C89F400B348E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F33B17D2189C89F400B348E8 /* Animal_FarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animal_FarmTests.m; sourceTree = "<group>"; };
+		F33B17DC189C8A3700B348E8 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		F33B17DD189C8A3700B348E8 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		F33B17DF189C8C7900B348E8 /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		F33B17E0189C8C7900B348E8 /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
+		F33B17E2189C9D0300B348E8 /* fox.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fox.jpg; sourceTree = "<group>"; };
+		F33B17E3189C9D0300B348E8 /* llama.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = llama.jpg; sourceTree = "<group>"; };
+		F33B17E4189C9D0300B348E8 /* panda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panda.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +129,12 @@
 				F33B17B9189C89F400B348E8 /* Main.storyboard */,
 				F33B17BC189C89F400B348E8 /* ControlFreakViewController.h */,
 				F33B17BD189C89F400B348E8 /* ControlFreakViewController.m */,
+				F33B17DF189C8C7900B348E8 /* NSMutableArray+Shuffle.h */,
+				F33B17E0189C8C7900B348E8 /* NSMutableArray+Shuffle.m */,
 				F33B17BF189C89F400B348E8 /* Images.xcassets */,
+				F33B17DC189C8A3700B348E8 /* Animal.h */,
+				F33B17DD189C8A3700B348E8 /* Animal.m */,
+				F33B17E8189C9D1A00B348E8 /* images */,
 				F33B17AE189C89F400B348E8 /* Supporting Files */,
 			);
 			path = "Animal Farm";
@@ -150,6 +167,16 @@
 				F33B17CF189C89F400B348E8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F33B17E8189C9D1A00B348E8 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F33B17E2189C9D0300B348E8 /* fox.jpg */,
+				F33B17E3189C9D0300B348E8 /* llama.jpg */,
+				F33B17E4189C9D0300B348E8 /* panda.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +258,10 @@
 			files = (
 				F33B17C0189C89F400B348E8 /* Images.xcassets in Resources */,
 				F33B17B2189C89F400B348E8 /* InfoPlist.strings in Resources */,
+				F33B17E7189C9D0300B348E8 /* panda.jpg in Resources */,
+				F33B17E6189C9D0300B348E8 /* llama.jpg in Resources */,
 				F33B17BB189C89F400B348E8 /* Main.storyboard in Resources */,
+				F33B17E5189C9D0300B348E8 /* fox.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F33B17BE189C89F400B348E8 /* ControlFreakViewController.m in Sources */,
+				F33B17E1189C8C7900B348E8 /* NSMutableArray+Shuffle.m in Sources */,
+				F33B17DE189C8A3700B348E8 /* Animal.m in Sources */,
 				F33B17B8189C89F400B348E8 /* ControlFreakAppDelegate.m in Sources */,
 				F33B17B4189C89F400B348E8 /* main.m in Sources */,
 			);

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ControlFreakViewController : UIViewController
+@interface ControlFreakViewController : UIViewController <UIScrollViewDelegate> {}
+
+@property (nonatomic,strong) NSMutableArray *animals;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *_scrollView;
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
+- (void)buttonTapped:(id)sender;
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
+
 
 @end
